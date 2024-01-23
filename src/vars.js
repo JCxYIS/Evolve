@@ -1212,7 +1212,7 @@ if (!global['settings']){
         q_merge: 'merge_nearby',
         cLabels: true,
         theme: 'gruvboxDark',
-        locale: 'en-US',
+        locale: 'zh-TW',
         icon: 'star'
     };
 }

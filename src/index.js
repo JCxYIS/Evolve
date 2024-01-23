@@ -1392,6 +1392,7 @@ export function index(){
                     <li><a href="https://github.com/pmotschmann/Evolve" target="_blank">GitHub</a></li>
                     <li><a href="https://www.patreon.com/demagorddon" target="_blank">Patreon</a></li>
                     <li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=PTRJZBW9J662C&currency_code=USD&source=url" target="_blank">Donate</a></li>
+                    <li><a href="https://youtu.be/2qBlE2-WL60" target="_blank">Cheats</a></li>
                 </ul>
             </span>
         </div>
