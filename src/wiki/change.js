@@ -3,6 +3,112 @@ import { clearElement } from './../functions.js';
 
 export const changeList = [
     {
+        version: `1.4.8`,
+        date: `5/16/2025`,
+        changes: [
+            `Psychic now works with Elysanite.`,
+            `Parasite Assembly now works on a delay timer rather then a wind restriction.`,
+            `Fixed bugs with trait mutation costs.`
+        ]
+    },
+    {
+        version: `1.4.7`,
+        date: `5/15/2025`,
+        changes: [
+            `Pit Miners now produce Chrysotile outside of Isolation.`,
+            `Fixed issue with "Hybrid" and Enlightenment.`,
+            `Fixed some problems with entering Isolation and ending Quarantine.`,
+            `Fixed some broken wiki trait displays.`
+        ]
+    },
+    {
+        version: `1.4.6`,
+        date: `5/13/2025`,
+        changes: [
+            `Added Catnip and Anise traits to Ent/Pinguicula.`,
+            `Fixed issue with saving trait ranks to custom export.`,
+            `Performance Optimizations.`
+        ]
+    },
+    {
+        version: `1.4.5`,
+        revision: `b`,
+        date: `5/12/2025`,
+        changes: [
+            `Fixed issues with loading custom race data into custom lab.`,
+            `Crates now correctly cost Bones instead of Boneweave with Iron Wood trait.`
+        ]
+    },
+    {
+        version: `1.4.5`,
+        revision: `a`,
+        date: `5/12/2025`,
+        changes: [
+            `Parasite now scales with rank.`,
+            `Synthetic parasites can now only assemble new citizens when it's windy.`
+        ]
+    },
+    {
+        version: `1.4.5`,
+        date: `5/11/2025`,
+        changes: [
+            `New Custom/Hybrid Lab mechanics.`,
+            `Added New Theme GrubBox (RedGreen CB) for Red/Green color blind players.`,
+            `Technophobe perk race complexity changed to flat gene point bonus.`,
+            `Overtapped has been removed, Negative traits instead pay a complexity tax.`,
+            `Enviromentalist now scales with trait rank.`,
+            `Thalassophobia replaced with Unfavored.`,
+            `Optimistic cost lowered from 5 points to 3.`,
+            `Fixed bug that could cause archfiends to queue with extra weapons.`
+        ]
+    },
+    {
+        version: `1.4.4`,
+        date: `5/7/2025`,
+        changes: [
+            `The native rank of Empowered for Nephilim is now 2.`,
+            `Build queue will no longer spend Warlord skill points.`,
+            `Dreaded will no longer unlock from Apotheosis.`,
+            `Custom Hybrids will no longer unlock Gross.`
+        ]
+    },
+    {
+        version: `1.4.3`,
+        date: `5/4/2025`,
+        changes: [
+            `Evil Universe Scenario: Warlord.`,
+            `Added Planned Obsolescence Feat.`,
+            `You can now queue Spire Mechs.`,
+            `You can now pet your cat or dog once every 5 minutes.`,
+            `Symposium now gain Knowledge for all crew in Andromeda.`,
+            `Evil Authority adjustments for Cataclysm, Lone Survivor, and Orbit Decay.`,
+            `Soldiers assigned to Fortress guard duty now contribute Authority.`,
+            `Updated Empowered trait mechanics.`,
+            `Adjusted values for Master Artisan.`,
+            `Evil Wendigo can now use Shovels.`,
+            `Racconar can now recruit quarry workers.`,
+            `You can no longer get more then 100 servants from each TP T4 reset.`,
+            `You are now capped at 100 skilled servants from TP resets.`,
+            `Empowered Concealment Wards changed to Empowered Nexus in Witch Hunter.`,
+            `Breakdown improvements for some resources.`,
+            `Uranium geology bonus now applies to Uranium Ash.`,
+            `Spire boss resists now have a random element.`,
+            `Slitheryn once again have slow digestion.`,
+            `Fixed bug with Rogue trait that set crafted resources to 0.`,
+            `Fixed bug that caused Hybrid species to throw an error when triggering greatness resets.`,
+            `Fixed bug that caused Hybrid species to throw an error when triggering a Cataclysm reset.`,
+            `Fixed issue with Iridium Smelters miscalculating result.`,
+            `Fixed a variety of Joyless edge cases.`,
+            `Fixed Space Casino appearing improperly in power grid.`,
+            `Fixed Potato Battery in antimatter universe not benefiting from dark energy.`,
+            `Fixed issue with Resonance not unlocking if you pillared without unlocking the gate towers.`,
+            `Fixed divide by zero error with Soul Forge when you have 0 Authority.`,
+            `Deprecated trait Frail will no longer show up in the Custom Lab.`,
+            `Accessibility improvements.`,
+            `Minor misc bug fixes.`
+        ]
+    },
+    {
         version: `1.4.2`,
         date: `3/23/2025`,
         changes: [
@@ -12,7 +118,7 @@ export const changeList = [
             `Evil Dark Energy effects changed.`,
             `Evil Biodome produces less food but boosts marine garrison.`,
             `Various Evil flavor updates.`,
-            `Various bug fixes.`,
+            `Various bug fixes.`
         ]
     },
     {
@@ -3476,7 +3582,7 @@ export function getTopChange(elm){
     for (let idx=index; idx>=0; idx--){
         elm.append(`<div class="type"><h2 class="has-text-warning">v${changeList[idx].version}${changeList[idx].hasOwnProperty('revision') ? changeList[idx].revision : ''}</h2><span class="has-text-caution">${changeList[idx].date}</span></div>`);
         for (let i=0; i<changeList[idx].changes.length; i++){
-            elm.append(`<div class="desc">${changeList[idx].changes[i]}</div>`);
+            elm.append(`<div class="desc condense">${changeList[idx].changes[i]}</div>`);
         }
     }
     return elm;
